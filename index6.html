@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <label>
+        Nhập doanh thu của tháng:
+        <input type="number" placeholder="Nhập số nguyên" id="input">
+    </label>
+</div>
+<div onclick="result()" id="result">
+    <button>Check</button>
+</div>
+
+<script>
+    function result() {
+        let input = document.getElementById('input').value
+        if (input < 100 ) {
+            document.getElementById('result').innerHTML = 'Không được nhận hoa hồng'
+        } else if ( input < 110) {
+            document.getElementById('result').innerHTML = 'Được nhận hoa hồng 5%'
+        } else if (input < 120) {
+            document.getElementById('result').innerHTML = 'Được nhận hoa hồng 7%'
+        }else {
+            document.getElementById('result').innerHTML = 'Được nhận hoa hồng 10%'
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <label>
+        Nhập điểm bài kiểm tra:
+        <input type="number" placeholder="Nhập số nguyên" id="number1">
+    </label>
+    <br>
+    <label>
+        Nhập điểm giữa kỳ:
+        <input type="number" placeholder="Nhập số nguyên" id="number2">
+    </label>
+    <br>
+    <label>
+        Nhập điểm thi cuối kỳ:
+        <input type="number" placeholder="Nhập số nguyên" id="number3">
+    </label>
+    <br>
+</div>
+<div onclick="result()" id="result">
+    <button>Check</button>
+</div>
+<script>
+    function result() {
+        let number1 = Number(document.getElementById('number1').value)
+        let number2 = Number(document.getElementById('number2').value)
+        let number3 = Number(document.getElementById('number3').value)
+        let number = (number1 + number2 + number3) /3
+        if (number < 5) {
+            document.getElementById('result').innerHTML = 'Học sinh Trung bình'
+        }else if (number < 8){
+            document.getElementById('result').innerHTML = 'Học sinh Khá'
+        }else {
+            document.getElementById('result').innerHTML = 'Học sinh Giỏi'
+        }
+    }
+</script>
+</body>
+</html>
